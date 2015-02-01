@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ClaimEditActivity" >
+
+    <TextView
+        android:id="@+id/nameofClaimText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/name_claim_text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/claimNameInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nameofClaimText"
+        android:layout_below="@+id/nameofClaimText"
+        android:ems="10"
+        android:hint="@string/claim_name_hint"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/startDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/claimNameInput"
+        android:layout_below="@+id/claimNameInput"
+        android:layout_marginTop="22dp"
+        android:text="@string/start_date_text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/endDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/startDateInput"
+        android:layout_below="@+id/startDateInput"
+        android:layout_marginTop="17dp"
+        android:text="@string/end_date_text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/endDateInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/endDateText"
+        android:layout_below="@+id/endDateText"
+        android:ems="10"
+        android:hint="@string/date_hint"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/desciptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/endDateInput"
+        android:layout_below="@+id/endDateInput"
+        android:layout_marginTop="21dp"
+        android:text="@string/description_text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/descriptionInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/desciptionText"
+        android:layout_below="@+id/desciptionText"
+        android:ems="10"
+        android:hint="@string/description_hint"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/deleteClaimButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/saveClaimButton"
+        android:layout_alignBottom="@+id/saveClaimButton"
+        android:layout_alignLeft="@+id/descriptionInput"
+        android:layout_toLeftOf="@+id/saveClaimButton"
+        android:text="@string/delete_claim_text" />
+
+    <Button
+        android:id="@+id/saveClaimButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/save_claim_text" />
+
+    <EditText
+        android:id="@+id/startDateInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/startDateText"
+        android:layout_below="@+id/startDateText"
+        android:ems="10"
+        android:hint="@string/date_hint"
+        android:inputType="date" />
+
+</RelativeLayout>

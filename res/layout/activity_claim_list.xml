@@ -34,6 +34,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
+        android:onClick="newClaim"
         android:text="@string/add_claim_text" />
 
 </RelativeLayout>

@@ -1,10 +1,12 @@
 package ca.cs.ualberta.rozsa_expensetracker;
 
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 
 import ca.cs.ualberta.rozsa_expensetracker.Claim;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
@@ -18,16 +20,26 @@ import android.widget.Toast;
 public class NewClaimActivity extends Activity {
 
 	private Claim claim;
-	private ArrayList<String> claims;
+	private ClaimList claims;
 	private ListView claims_list;
-	private ArrayAdapter<String> adapter;
 	
 	private EditText claim_name_input;
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_new_claim);
+	
+		claims = ClaimListController.getClaimList();
+		
+		ClaimListController.getClaimList().addListener(new Listener() {
+	
+		public void update() {
+			
+		};
+		});
+	
 		
 		claims_list = (ListView) findViewById(R.id.list_of_claims_text);
 		claim_name_input = (EditText) findViewById(R.id.claimNameInput);
@@ -36,14 +48,13 @@ public class NewClaimActivity extends Activity {
 		saveButton.setOnClickListener(new OnClickListener() {
 			 @Override
 	         public void onClick(View arg0) {
-				 
-				 String claim_name = claim_name_input.getText().toString();
-				 //claim.setTrip_name(claim_name);
-				 
-				 
-				 claims.add(claim_name);
-				 adapter.notifyDataSetChanged();
-				 
+
+				 //claim.setTrip_name(claim_name_input.getText().toString());
+				 //claim.setStatus("Open");
+				 //claim.setStart_date(new GregorianCalendar(1994, 04, 26));
+				 //claim.setEnd_date(new GregorianCalendar(2015, 2, 1));
+				 //claims.addClaim(claim);
+					 
 				 Toast.makeText(NewClaimActivity.this, "Claim has been Saved.", Toast.LENGTH_LONG).show();
 				 Intent intent = new Intent(NewClaimActivity.this, ClaimListActivity.class);
 				 startActivity(intent); 
@@ -61,13 +72,11 @@ public class NewClaimActivity extends Activity {
 		});
 	}
 	
-	@Override
 	protected void onStart() {
 		super.onStart();
-		adapter = new ArrayAdapter<String>(this, R.id.list_of_claims_text, claims);
-		claims_list.setAdapter(adapter);
 		
 	}
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

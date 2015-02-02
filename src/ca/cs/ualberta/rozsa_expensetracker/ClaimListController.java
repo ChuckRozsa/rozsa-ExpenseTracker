@@ -10,6 +10,8 @@ public class ClaimListController {
 		return claimlist;
 	}
 	
-	
+	public void addClaim(Claim claim) {
+		claimlist.addClaim(claim);
+	}
 	
 }

@@ -21,7 +21,7 @@ public class ClaimListAdapter extends ArrayAdapter<Claim> {
 	       Claim claim = getItem(position);    
 	       
 	       if (convertView == null) {
-	          convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_claim_list, parent, false);
+	          convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
 	       }
 	       
 	       TextView tvName = (TextView) convertView.findViewById(R.id.first);

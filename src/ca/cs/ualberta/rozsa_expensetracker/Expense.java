@@ -2,6 +2,11 @@ package ca.cs.ualberta.rozsa_expensetracker;
 
 import java.util.GregorianCalendar;
 
+/*
+ * Expense class that has a name, amount and type, category and date.
+ * Is used by the claims class.
+ */
+
 public class Expense {
 	private String name;
 	private String category;
@@ -36,8 +41,12 @@ public class Expense {
 	public GregorianCalendar getDate() {
 		return date;
 	}
-	public void setDate(GregorianCalendar date) {
-		this.date = date;
+	
+	//Similar to claims, the method parses the string into a calendar date.
+	
+	public void setDate(String date) {
+		this.date = new GregorianCalendar(Integer.parseInt(date.substring(0,3)), Integer.parseInt(date.substring(5,6))
+				, Integer.parseInt(date.substring(8,9)));
 	}
 	
 }

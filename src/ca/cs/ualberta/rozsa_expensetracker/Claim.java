@@ -4,6 +4,11 @@ package ca.cs.ualberta.rozsa_expensetracker;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
+/* Claim class that deals with individual claims. Has a list of expenses 
+ * and the ability to get the total currency of expenses of a given 
+ * type.
+ */ 
+ 
 public class Claim {
 	private String trip_name;
 	private GregorianCalendar start_date;
@@ -43,15 +48,33 @@ public class Claim {
 		return end_date;
 	}
 
-	public void setEnd_date(GregorianCalendar end_date) {
-		this.end_date = end_date;
+	//Takes in a string from the UI in a given format and parses it into
+	//its caledar date
+	
+	public void setEnd_date(String date) {
+		this.end_date = new GregorianCalendar(Integer.parseInt(date.substring(0,3)), Integer.parseInt(date.substring(5,6))
+				, Integer.parseInt(date.substring(8,9)));
 	}
 
 	public GregorianCalendar getStart_date() {
 		return start_date;
 	}
 
-	public void setStart_date(GregorianCalendar start_date) {
-		this.start_date = start_date;
+	public void setStart_date(String date) {
+		this.start_date = new GregorianCalendar(Integer.parseInt(date.substring(0,3)), Integer.parseInt(date.substring(5,6))
+				, Integer.parseInt(date.substring(8,9)));
 	}
+	
+	//Gets the total amount of money spent in a given currency for all expenses
+	
+	public double getCurrency(String type){
+		double sum = 0;
+		for (Expense e: expenses) {
+			if (e.getCurrency_type().equals(type)) {
+				sum += e.getAmount();
+			}
+		}
+		return sum;
+	}
+	
 }

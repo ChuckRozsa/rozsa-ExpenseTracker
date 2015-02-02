@@ -46,9 +46,9 @@ public class ClaimListActivity extends Activity {
 		setContentView(R.layout.activity_claim_list);
 		
 		
-		claims = ClaimListController.getClaimList();
-		Claim claim = new Claim();
-		claim.setTrip_name("Hello");
+		
+	//Listener that updates the claims in this activity whenever a claim is added or taken
+	//away. Also should notify adapter of changes. Could not get adapter to work.
 		
 		ClaimListController.getClaimList().addListener(new Listener() {
 			
@@ -62,7 +62,7 @@ public class ClaimListActivity extends Activity {
 		});
 		
 		
-		Toast.makeText(ClaimListActivity.this, claim.getTrip_name(), Toast.LENGTH_LONG).show();
+		//Button that changes the screen to the NewClaimActivity
 		
 		Button button = (Button) findViewById(R.id.addClaimButton);
 		button.setOnClickListener(new OnClickListener() {
@@ -79,6 +79,7 @@ public class ClaimListActivity extends Activity {
 	protected void onStart() {
 		super.onStart();
 		
+		//Could not get this to run without null pointer exception. Custom adapter not right?
 		
 		//adapter = new ClaimListAdapter(this, ClaimListController.getClaimList().getClaims());
 		//claims_list.setAdapter(adapter);
@@ -91,6 +92,7 @@ public class ClaimListActivity extends Activity {
 		getMenuInflater().inflate(R.menu.claim_list, menu);
 		return true;
 	}
+	
 	
 	
 	

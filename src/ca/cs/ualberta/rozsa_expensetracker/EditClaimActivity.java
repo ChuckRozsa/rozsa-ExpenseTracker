@@ -4,6 +4,10 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
+//Editclaim activity that would have been slightly different then new
+//claim activity in that it would have taken the values of the claim
+//and put them into the input fields for editing.
+
 public class EditClaimActivity extends Activity {
 
 	@Override

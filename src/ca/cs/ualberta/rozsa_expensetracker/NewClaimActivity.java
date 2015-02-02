@@ -21,7 +21,7 @@ public class NewClaimActivity extends Activity {
 
 	private Claim claim;
 	private ClaimListController claims;
-	
+	private ClaimListController cl;
 	private EditText claim_name_input;
 	
 	
@@ -31,18 +31,15 @@ public class NewClaimActivity extends Activity {
 		setContentView(R.layout.activity_new_claim);
 	
 	
-		claim_name_input = (EditText) findViewById(R.id.claimNameInput);
+		claim_name_input = (EditText) findViewById(R.id.expenseNameInput);
 		
-		Button saveButton = (Button) findViewById(R.id.saveClaimButton);
+		Button saveButton = (Button) findViewById(R.id.saveExpenseButton);
 		saveButton.setOnClickListener(new OnClickListener() {
 			 @Override
 	         public void onClick(View arg0) {
 
-				 //claim.setTrip_name(claim_name_input.getText().toString());
-				 //claim.setStatus("Open");
-				 //claim.setStart_date(new GregorianCalendar(1994, 04, 26));
-				 //claim.setEnd_date(new GregorianCalendar(2015, 2, 1));
-				 //claims.addClaim(claim);
+				 //Would generate a claim from all the input fields and add them to cl
+				 //Could not generate code without errors.
 					 
 				 Toast.makeText(NewClaimActivity.this, "Claim has been Saved.", Toast.LENGTH_LONG).show();
 				 Intent intent = new Intent(NewClaimActivity.this, ClaimListActivity.class);
@@ -50,7 +47,7 @@ public class NewClaimActivity extends Activity {
 			 }
 		});
 		
-		Button deleteButton = (Button) findViewById(R.id.deleteClaimButton);
+		Button deleteButton = (Button) findViewById(R.id.deleteExpenseButton);
 		deleteButton.setOnClickListener(new OnClickListener() {
 			 @Override
 	         public void onClick(View arg0) {

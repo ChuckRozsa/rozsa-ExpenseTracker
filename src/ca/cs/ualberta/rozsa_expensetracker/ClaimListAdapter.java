@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+//Half baked custom adapter that should have updated the claimListView to show
+//the name of claims in the list. Not sure what is wrong.
+
 public class ClaimListAdapter extends ArrayAdapter<Claim> {
 	
 	public ClaimListAdapter(Context context, ArrayList<Claim> claims) {

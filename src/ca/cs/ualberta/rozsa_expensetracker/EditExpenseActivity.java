@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
+//Similar to EdiiClaimActivity it would have taken the values of the expense
+//and put them into the input fields for editing.
+
 public class EditExpenseActivity extends Activity {
 
 	@Override

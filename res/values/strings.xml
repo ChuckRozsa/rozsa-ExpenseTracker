@@ -50,5 +50,6 @@
     <string name="delete_expense_text">Delete Expense</string>
     <string name="save_expense_text">Save Expense</string>
     <string name="title_activity_edit_expense">EditExpenseActivity</string>
+    <string name="claim_view_menu">Claim View</string>
 
 </resources>

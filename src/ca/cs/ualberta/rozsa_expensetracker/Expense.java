@@ -5,7 +5,7 @@ import java.util.GregorianCalendar;
 public class Expense {
 	private String name;
 	private String category;
-	private int amount;
+	private double amount;
 	private String currency_type;
 	private GregorianCalendar date;
 	
@@ -21,10 +21,10 @@ public class Expense {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	public int getAmount() {
+	public double getAmount() {
 		return amount;
 	}
-	public void setAmount(int amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
 	public String getCurrency_type() {

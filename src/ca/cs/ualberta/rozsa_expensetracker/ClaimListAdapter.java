@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class ClaimListAdapter extends ArrayAdapter<Claim> {
 	
 	public ClaimListAdapter(Context context, ArrayList<Claim> claims) {
-	       super(context, 0, claims);
+	       super(context, R.id.claimListView, claims);
 	    }
 
 	    @Override

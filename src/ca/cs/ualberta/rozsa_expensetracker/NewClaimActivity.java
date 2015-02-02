@@ -20,8 +20,7 @@ import android.widget.Toast;
 public class NewClaimActivity extends Activity {
 
 	private Claim claim;
-	private ClaimList claims;
-	private ListView claims_list;
+	private ClaimListController claims;
 	
 	private EditText claim_name_input;
 	
@@ -31,17 +30,7 @@ public class NewClaimActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_new_claim);
 	
-		claims = ClaimListController.getClaimList();
-		
-		ClaimListController.getClaimList().addListener(new Listener() {
 	
-		public void update() {
-			
-		};
-		});
-	
-		
-		claims_list = (ListView) findViewById(R.id.list_of_claims_text);
 		claim_name_input = (EditText) findViewById(R.id.claimNameInput);
 		
 		Button saveButton = (Button) findViewById(R.id.saveClaimButton);

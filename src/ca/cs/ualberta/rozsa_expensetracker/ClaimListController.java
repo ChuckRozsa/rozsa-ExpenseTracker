@@ -14,4 +14,7 @@ public class ClaimListController {
 		claimlist.addClaim(claim);
 	}
 	
+	public void removeClaim(Claim claim) {
+		claimlist.removeClaim(claim);
+	}
 }

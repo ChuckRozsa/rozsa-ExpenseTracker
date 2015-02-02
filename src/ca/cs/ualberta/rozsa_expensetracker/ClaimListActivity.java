@@ -38,7 +38,7 @@ public class ClaimListActivity extends Activity {
 				claims.clear();
 				ArrayList<Claim> newclaims = ClaimListController.getClaimList().getClaims();
 				claims.addAll(newclaims);
-				adapter.notifyDataSetChanged();
+				//adapter.notifyDataSetChanged();
 			}
 		});
 		
@@ -60,12 +60,9 @@ public class ClaimListActivity extends Activity {
 	protected void onStart() {
 		super.onStart();
 		
-		Claim claim = new Claim();
-		claim.setTrip_name("Hello");
 		
-		adapter = new ClaimListAdapter(this, ClaimListController.getClaimList().getClaims());
-		claims_list.setAdapter(adapter);
-		ct.addClaim(claim);
+		//adapter = new ClaimListAdapter(this, ClaimListController.getClaimList().getClaims());
+		//claims_list.setAdapter(adapter);
 		
 	}
 	

@@ -26,6 +26,22 @@
             android:name="ca.cs.ualberta.rozsa_expensetracker.NewClaimActivity"
             android:label="@string/title_activity_new_claim" >
         </activity>
+        <activity
+            android:name="ca.cs.ualberta.rozsa_expensetracker.EditClaimActivity"
+            android:label="@string/title_activity_edit_claim" >
+        </activity>
+        <activity
+            android:name="ca.cs.ualberta.rozsa_expensetracker.ClaimViewActivity"
+            android:label="@string/title_activity_claim_view" >
+        </activity>
+        <activity
+            android:name="ca.cs.ualberta.rozsa_expensetracker.NewExpenseActivity"
+            android:label="@string/title_activity_new_expense" >
+        </activity>
+        <activity
+            android:name="ca.cs.ualberta.rozsa_expensetracker.EditExpenseActivity"
+            android:label="@string/title_activity_edit_expense" >
+        </activity>
     </application>
 
 </manifest>

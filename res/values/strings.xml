@@ -40,5 +40,15 @@
     <string name="title_activity_new_expense">NewExpenseActivity</string>
     <string name="name_expense_text">Name of Expense:</string>
     <string name="expense_type_text">Type of Expense:</string>
+    <string name="title_activity_edit_claim">EditClaimActivity</string>
+    <string name="title_activity_claim_view">ClaimViewActivity</string>
+    <string name="claim_status_text">Status:</string>
+    <string name="curr_cad">CAD</string>
+    <string name="curr_usd">USD</string>
+    <string name="curr_eur">EUR</string>
+    <string name="curr_gbp">GBP</string>
+    <string name="delete_expense_text">Delete Expense</string>
+    <string name="save_expense_text">Save Expense</string>
+    <string name="title_activity_edit_expense">EditExpenseActivity</string>
 
 </resources>

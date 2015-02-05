@@ -1,6 +1,8 @@
 # rozsa-ExpenseTracker
 Assignment 1 for CMPUT 301
 
+YouTube Link: https://www.youtube.com/watch?v=wcigf5i2Uck
+
  Expense Tracker Assignment for use in CMPUT 301
     Copyright (C) 2015  Charles Rozsa
 

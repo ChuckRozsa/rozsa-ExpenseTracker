@@ -34,11 +34,10 @@ import android.widget.Toast;
 
 public class ClaimListActivity extends Activity {
 
-	private ClaimList claims;
+	private ClaimList claims = new ClaimList();
 	private ArrayAdapter<Claim> adapter;
 	
 	private ListView claims_list;
-	private ClaimListController ct = new ClaimListController();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +45,7 @@ public class ClaimListActivity extends Activity {
 		setContentView(R.layout.activity_claim_list);
 		
 		
+		claims_list = (ListView) findViewById(R.id.claimListView);
 		
 	//Listener that updates the claims in this activity whenever a claim is added or taken
 	//away. Also should notify adapter of changes. Could not get adapter to work.
@@ -57,7 +57,7 @@ public class ClaimListActivity extends Activity {
 				claims.clear();
 				ArrayList<Claim> newclaims = ClaimListController.getClaimList().getClaims();
 				claims.addAll(newclaims);
-				//adapter.notifyDataSetChanged();
+				adapter.notifyDataSetChanged();
 			}
 		});
 		
@@ -81,8 +81,9 @@ public class ClaimListActivity extends Activity {
 		
 		//Could not get this to run without null pointer exception. Custom adapter not right?
 		
-		//adapter = new ClaimListAdapter(this, ClaimListController.getClaimList().getClaims());
-		//claims_list.setAdapter(adapter);
+		adapter = new ClaimListAdapter(this, ClaimListController.getClaimList().getClaims());
+		claims_list.setAdapter(adapter);
+		
 		
 	}
 	

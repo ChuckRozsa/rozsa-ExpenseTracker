@@ -14,6 +14,7 @@ public class Claim {
 	private GregorianCalendar start_date;
 	private GregorianCalendar end_date;
 	private String status;
+	private String description;
 	private ArrayList<Expense> expenses;
 	
 	
@@ -75,6 +76,14 @@ public class Claim {
 			}
 		}
 		return sum;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 }

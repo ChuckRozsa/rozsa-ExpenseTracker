@@ -19,11 +19,10 @@ import android.widget.Toast;
 
 public class NewClaimActivity extends Activity {
 
-	private Claim claim;
-	private ClaimListController claims;
-	private ClaimListController cl;
+	private Claim claim = new Claim();
+	private ClaimListController cl = new ClaimListController();
 	private EditText claim_name_input;
-	
+	private EditText claim_description;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +31,7 @@ public class NewClaimActivity extends Activity {
 	
 	
 		claim_name_input = (EditText) findViewById(R.id.expenseNameInput);
+		claim_description = (EditText) findViewById(R.id.expenseDescriptionInput);
 		
 		Button saveButton = (Button) findViewById(R.id.saveExpenseButton);
 		saveButton.setOnClickListener(new OnClickListener() {
@@ -40,6 +40,9 @@ public class NewClaimActivity extends Activity {
 
 				 //Would generate a claim from all the input fields and add them to cl
 				 //Could not generate code without errors.
+				 claim.setTrip_name(claim_name_input.getText().toString());
+				 claim.setDescription(claim_description.getText().toString());
+				 cl.addClaim(claim);
 					 
 				 Toast.makeText(NewClaimActivity.this, "Claim has been Saved.", Toast.LENGTH_LONG).show();
 				 Intent intent = new Intent(NewClaimActivity.this, ClaimListActivity.class);

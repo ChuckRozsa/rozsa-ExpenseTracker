@@ -44,7 +44,6 @@ public final class R {
         public static final int expenseNameInput=0x7f09000f;
         public static final int expenseTypeSpinner=0x7f09001a;
         public static final int expenseTypeText=0x7f090006;
-        public static final int first=0x7f09001b;
         public static final int list_of_claims_text=0x7f090002;
         public static final int nameofExpenseText=0x7f09000e;
         public static final int saveExpenseButton=0x7f090017;
@@ -56,6 +55,7 @@ public final class R {
         public static final int textView7=0x7f09000d;
         public static final int textView8=0x7f09000c;
         public static final int textView9=0x7f09000b;
+        public static final int title=0x7f09001b;
     }
     public static final class layout {
         public static final int activity_claim_list=0x7f030000;

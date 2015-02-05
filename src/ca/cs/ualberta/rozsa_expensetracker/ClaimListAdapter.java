@@ -24,12 +24,13 @@ public class ClaimListAdapter extends ArrayAdapter<Claim> {
 	       Claim claim = getItem(position);    
 	       
 	       if (convertView == null) {
-	          convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
+	          convertView = LayoutInflater.from(getContext()).inflate(android.R.layout.simple_list_item_2, parent, false);
 	       }
 	       
-	       TextView tvName = (TextView) convertView.findViewById(R.id.first);
-	       
-	       tvName.setText(claim.getTrip_name());
+	       TextView tv1 = (TextView) convertView.findViewById(android.R.id.text1);
+	       TextView tv2 = (TextView) convertView.findViewById(android.R.id.text2);
+	       tv1.setText(claim.getTrip_name());
+	       tv2.setText(claim.getDescription());
 	       
 	       return convertView;
 	   }
